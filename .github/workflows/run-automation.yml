@@ -6,10 +6,6 @@ on:
 
   workflow_dispatch:
     inputs:
-      max_pages:
-        description: "Max pages to crawl"
-        required: false
-        default: "60"
       fail_on_issues:
         description: "Fail if issues found? (true/false)"
         required: false
@@ -47,13 +43,12 @@ jobs:
       - name: Run Link Checker
         id: link_check
         run: |
-          MAX_PAGES="${{ github.event.inputs.max_pages || github.event.client_payload.max_pages || '60' }}"
           FAIL="${{ github.event.inputs.fail_on_issues || 'true' }}"
 
           if [ "$FAIL" = "true" ]; then
-            python worldposta_automation_complete.py --headless --max-pages "$MAX_PAGES"
+            python worldposta_automation_complete.py --headless
           else
-            python worldposta_automation_complete.py --headless --max-pages "$MAX_PAGES" --no-fail
+            python worldposta_automation_complete.py --headless --no-fail
           fi
 
       - name: Upload Report
