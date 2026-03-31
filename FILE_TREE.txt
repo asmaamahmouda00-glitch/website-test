@@ -1,0 +1,163 @@
+📦 WorldPosta Automation Project
+│
+├── 🔧 MAIN AUTOMATION SCRIPTS
+│   ├── worldposta_automation.py      ⭐ Core automation engine (38KB)
+│   ├── test_with_custom_data.py      ⭐ Run with your test account
+│   └── batch_runner.py               ⭐ Process multiple accounts
+│
+├── 📚 DOCUMENTATION
+│   ├── QUICKSTART.md                 🚀 Fast start guide
+│   ├── README.md                     📖 Complete documentation
+│   ├── PROJECT_SUMMARY.md            📄 Project overview
+│   └── FILE_TREE.txt                 📁 This file
+│
+├── 📦 DEPENDENCIES
+│   └── requirements.txt              📦 Python packages
+│
+└── 📊 OUTPUT FILES (auto-created on first run)
+    ├── registration_results.csv      📊 CSV log
+    ├── registration_results.json     📋 JSON log
+    ├── accounts_to_register.csv      📝 Batch input file
+    └── SS/                           📸 Screenshots folder
+        ├── email_registration_*.png
+        ├── email_email_login_*.png
+        ├── email_email_found_*.png
+        ├── email_confirmed_*.png
+        ├── email_website_login_*.png
+        ├── email_view_posta_*.png
+        ├── email_view_cloudedge_*.png
+        └── email_final_success_*.png
+
+═══════════════════════════════════════════════════════════════
+🚀 QUICK START
+═══════════════════════════════════════════════════════════════
+
+1. Install dependencies:
+   pip install -r requirements.txt
+
+2. Run automation with your test account:
+   python test_with_custom_data.py
+
+3. Watch the browser automatically:
+   ✅ Register account
+   ✅ Login to email
+   ✅ Find verification email
+   ✅ Click confirmation link
+   ✅ Login to website
+   ✅ Click action buttons
+   ✅ Take screenshots
+   ✅ Save results
+
+═══════════════════════════════════════════════════════════════
+📋 YOUR TEST ACCOUNT (Pre-configured)
+═══════════════════════════════════════════════════════════════
+
+Email:    ai.dexter85@worldposta.com
+Name:     AI dexter85
+Company:  AI Company dexter85
+Phone:    1095666032
+Password: [stored in test_with_custom_data.py]
+
+═══════════════════════════════════════════════════════════════
+🎯 WHAT GETS AUTOMATED
+═══════════════════════════════════════════════════════════════
+
+STEP 1: Registration
+  → Navigate to registration page
+  → Fill all form fields with human-like typing
+  → Click "Create Account" button
+  → Take screenshot
+
+STEP 2: Email Login
+  → Navigate to WorldPosta webmail
+  → Enter email and password
+  → Click login button
+  → Take screenshot
+
+STEP 3: Find Verification Email
+  → Search inbox for "Welcome To WorldPosta Business Email"
+  → Wait up to 300 seconds (5 minutes)
+  → Refresh inbox every 15 seconds
+  → Open email when found
+  → Take screenshot
+
+STEP 4: Extract Verification Link
+  → Parse email HTML
+  → Find "Confirm Email Address" link
+  → Extract URL with ConfirmEmail parameter
+
+STEP 5: Confirm Email
+  → Navigate to verification URL
+  → Wait for confirmation
+  → Take screenshot
+
+STEP 6: Website Login
+  → Navigate to login page
+  → Enter credentials
+  → Click "Sign in" button
+  → Take screenshot
+
+STEP 7: Post-Login Actions
+  → Click "View Posta" button
+  → Take screenshot
+  → Navigate back
+  → Click "View CloudEdge" button
+  → Take screenshot
+
+STEP 8: Finalize
+  → Take final success screenshot
+  → Save status to CSV
+  → Save status to JSON
+
+═══════════════════════════════════════════════════════════════
+✨ FEATURES
+═══════════════════════════════════════════════════════════════
+
+🤖 Human-Like Behavior
+  ✓ Random delays (1-8 seconds)
+  ✓ Character-by-character typing with random speed
+  ✓ Mouse movement simulation
+  ✓ Smooth scrolling to elements
+  ✓ Random window sizes
+
+🛡️ Anti-Detection
+  ✓ Undetected ChromeDriver
+  ✓ Disabled automation flags
+  ✓ Realistic user behavior patterns
+
+🔧 Robust Error Handling
+  ✓ Try/except blocks everywhere
+  ✓ Multiple selector attempts
+  ✓ Fallback strategies
+  ✓ Error screenshots
+  ✓ Detailed error messages
+
+📊 Comprehensive Logging
+  ✓ Console output with emojis
+  ✓ CSV results log
+  ✓ JSON results log
+  ✓ Screenshots at every step
+  ✓ Timestamps for all events
+
+═══════════════════════════════════════════════════════════════
+📖 DOCUMENTATION
+═══════════════════════════════════════════════════════════════
+
+QUICKSTART.md       → Fast setup (3 steps to run)
+README.md           → Full documentation with examples
+PROJECT_SUMMARY.md  → Complete project overview
+FILE_TREE.txt       → This file (project structure)
+
+═══════════════════════════════════════════════════════════════
+💡 TIPS
+═══════════════════════════════════════════════════════════════
+
+✓ First run: Use visible browser mode to watch
+✓ Debugging: Check screenshots if any step fails
+✓ Scaling: Use batch_runner.py for multiple accounts
+✓ Custom paths: Edit SCREENSHOT_DIR in main script
+✓ Timeouts: Adjust EMAIL_WAIT_TIMEOUT if needed
+
+═══════════════════════════════════════════════════════════════
+
+Ready to automate! Run: python test_with_custom_data.py 🚀
